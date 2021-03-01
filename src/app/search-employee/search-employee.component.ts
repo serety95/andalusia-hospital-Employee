@@ -1,3 +1,5 @@
+import { Employee } from './../_models/employee';
+import { EmployeeServiceService } from './../_services/employee-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-employee.component.scss']
 })
 export class SearchEmployeeComponent implements OnInit {
-
-  constructor() { }
+ 
+  constructor(private employeeService:EmployeeServiceService) { }
 
   ngOnInit(): void {
+    let Employees=this.employeeService.getAllEmployees()
+    console.log(Employees)
+    
   }
+  title = 'Employee search';
+  searchText;
+  myEmployees=this.employeeService.getAllEmployees()
 
 }

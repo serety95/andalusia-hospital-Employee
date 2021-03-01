@@ -1,14 +1,31 @@
-<div class="container-fluid">
-    <div class="row py-5">
-       
-        <div class="col-12 py-5">
-            <h1>search employee</h1>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-        </div>
-           
-       
+<div class="container text-center">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Start searching for a employee by Code or name or department">
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Employee Department</th>
+          <th>Employee Code</th>
+          <th>Employee Birthday</th>
+          <th>Employee gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let employee of myEmployees | filter:searchText">
+          <td>{{employee.name}}</td>
+          <td>{{employee.department}}</td>
+          <td>{{employee.employeeCode}}</td>
+          <td>{{employee.birthDay}}</td>
+          <td>{{employee.gender}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
-</div>
+  </div>
+  
