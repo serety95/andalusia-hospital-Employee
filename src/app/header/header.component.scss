@@ -1,0 +1,11 @@
+
+
+.navbar-dark {
+    
+    &.bg-dark{
+        background: url(../../assets/images/manu-pattern.jpg),#212529;
+        background-blend-mode:overlay !important;
+        background-repeat:round;
+      
+    }
+}
