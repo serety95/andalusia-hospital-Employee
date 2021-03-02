@@ -15,10 +15,11 @@ export class AddEmployeeComponent implements OnInit {
     birthDay:new Date(),
     gender:""}
   constructor(private employeeService:EmployeeServiceService) { }
-
+  title = 'Add Employee';
   ngOnInit(): void {
   }
 addEmployee():void{
 this.employeeService.addEmployee(this.employee)
+alert(JSON.stringify(this.employee)+"....employee added")
 }
 }

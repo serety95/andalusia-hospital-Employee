@@ -1,31 +1,82 @@
-<div class="container text-center">
-    <h1>{{title}}</h1>
-  </div>
-  <div class="container">
+<div class="container-fluid m-0 p-0">
     <div class="row">
-      <div class="search-hero">
-        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Start searching for a employee by Code or name or department">
-      </div>
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th>Employee Name</th>
-          <th>Employee Department</th>
-          <th>Employee Code</th>
-          <th>Employee Birthday</th>
-          <th>Employee gender</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let employee of myEmployees | filter:searchText">
-          <td>{{employee.name}}</td>
-          <td>{{employee.department}}</td>
-          <td>{{employee.employeeCode}}</td>
-          <td>{{employee.birthDay}}</td>
-          <td>{{employee.gender}}</td>
-        </tr>
-        </tbody>
-      </table>
+        <form class="bg-dark text-white shadow-lg p-2" action="">
+
+            <fieldset class="p-4   ">
+                <legend  class="mb-2">{{title}}</legend>
+                <div class="row d-flex justify-content-center align-items-center">
+
+                    <div class="col-md-6 col-12  mb-3 search-hero px-3">
+                        <label for="search" class="form-label fw-bold">Search</label>
+                        <input class="form-control" 
+                        type="text" 
+                        [ngClass]="{'is-invalid':search.invalid && search.touched}" 
+                        #search="ngModel" 
+                        id="search" 
+                        name="search" 
+                        [(ngModel)]="searchText" 
+                        required
+                        placeholder="Start searching for an employee by Code or name or department">
+                        <div class="invalid-feedback">Please write down a Search keyword</div>
+                      </div>
+                      <div class="col-md-6 col-12  mb-3 px-3">
+                        <label for="department" class="form-label fw-bold">
+                            Department
+                           </label>
+                           <select class="form-select custom-select" 
+                           (change)="onChange($event)"
+                           [ngClass]="{'is-invalid':department.invalid && department.touched}"
+                           [(ngModel)]="employee.department"
+                           id="department"
+                           name="department"
+                           required
+                           #department="ngModel"
+                           ><option value="" disabled selected>select the department</option>
+                             <option value="web Development">web Development</option>
+                             <option value="Mobile Development">Mobile Development</option>
+                             <option value="Cloud Development">Cloud Development</option>
+                           </select>
+                           <div class="invalid-feedback">Please select a Department</div>
+                      </div>
+    
+                </div>
+             </fieldset>
+
+            
+        </form>
     </div>
-  </div>
-  
+    
+    <div class="row  ">
+        <div class="col-12 table-responsive p-0">
+            <table class="table table-hover bg-secondary my-4">
+                <thead>
+                <tr>
+                  <th scope="col"><input type="checkbox" (click)="CheckAll()" ></th> 
+                  <th scope="col">Employee Name</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Employee Code</th>
+                  <th scope="col">Birthday</th>
+                  <th scope="col">Employee gender</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let employee of myEmployees | filter:searchText" [ngClass]="{'bg-success':employee.checked}">
+                    <td><input type="checkbox" [(ngModel)]="employee.checked"  ></td>
+                  <td>{{employee.name}}</td>
+                  <td>{{employee.department}}</td>
+                  <td>{{employee.employeeCode}}</td>
+                  <td>{{employee.birthDay}}</td>
+                  <td>{{employee.gender}}</td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+        
+    </div>
+</div>
+ 
+      
+      
+      
+     
+ 

@@ -1,3 +1,14 @@
 .bg-danger{
    background-color:  rgb(145, 19, 17) !important;
 }
+.myLink{
+   text-decoration: none;
+   font-weight: bolder;
+   transition-duration: 0.7s;
+   padding-left: 3px;
+     color: white;
+     &:hover{
+      color:black;
+     
+     }
+}
