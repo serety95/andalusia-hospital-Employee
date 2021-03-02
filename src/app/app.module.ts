@@ -13,7 +13,14 @@ import { SearchEmployeeComponent } from './search-employee/search-employee.compo
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +36,15 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     NgbModule,
     FormsModule,
    AppRoutingModule,
-   Ng2SearchPipeModule
+   Ng2SearchPipeModule, 
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+    loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+    }
+})
    
     
   ],
