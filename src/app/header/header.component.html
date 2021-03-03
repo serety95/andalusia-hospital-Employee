@@ -18,6 +18,54 @@
           <li class="nav-item text-white d-flex justify-content-center align-items-center">
             {{ time | date: 'hh:mm , dd MMMM yyyy'}}
           </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href=""
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img [src]="langFlag" alt="" srcset="" width="30px" />
+            </a>
+  
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <div class="mx-2 form-check">
+                  <input
+                    #inputEnglish
+                    class="form-check-input"
+                    type="radio"
+                    (click)="changeCurrentLanguage('en')"
+                    name="lang"
+                    id="english-lang"
+                    [checked]="currentLang === 'en'"
+                  />
+                  <label class="form-check-label" for="english-lang">
+                    English
+                  </label>
+                </div>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <div class="mx-2 form-check">
+                  <input
+                    #inputArabic
+                    class="form-check-input"
+                    type="radio"
+                    (click)="changeCurrentLanguage('ar')"
+                    name="lang"
+                    id="arabic-lang"
+                    [checked]="currentLang === 'ar'"
+                  />
+                  <label class="form-check-label" for="arabic-lang"> عربي </label>
+                </div>
+              </li>
+            </ul>
+          </li>
           
         </ul>
         

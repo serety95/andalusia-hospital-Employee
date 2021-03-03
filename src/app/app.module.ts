@@ -37,15 +37,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
    AppRoutingModule,
    Ng2SearchPipeModule, 
-    TranslateModule.forRoot({
-      defaultLanguage: 'en',
+   HttpClientModule,
+   TranslateModule.forRoot({
+    defaultLanguage: 'en',
     loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-    }
-})
-   
+      provide: TranslateLoader,
+      useFactory:  HttpLoaderFactory,
+      deps: [HttpClient],
+    },
+  }),
     
   ],
   providers: [],

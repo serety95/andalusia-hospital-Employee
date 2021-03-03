@@ -1,0 +1,16 @@
+{
+  "HEADER": {
+    "HELLO": "مرحبا, ",
+    "SIGNIN": "تسجيل الدخول",
+    "ACCOUNT_&_LISTS": "الحساب والقوائم",
+    "RETURNS": "المرتجعات"
+   
+  },
+  "HOME": {
+    "GAMING_ACCESSORIES": "اكسسوارات الألعاب"
+    
+  },
+  "SELLER": {
+    "GET_STARTED_SELLING": "ابدأ البيع على أمازون"
+  }
+}
