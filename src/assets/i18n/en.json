@@ -8,8 +8,22 @@
   "HOME": {
     "WELCOME": "Welcome to Andalusia Employees App" 
   },
-  "SEARCH-EMPLOYEE": {
-    "DEPARTMENT": "Department"
+  "EMPLOYEE": {
+    "DEPARTMENT": "Department",
+    "ADD":"Add Employee",
+    "SEARCH":"Search for Employee",
+    "NAME":"Employee Name",
+    "CODE":"Employee Code",
+    "BIRTHDAY":"Birthday Date",
+    "GENDER_VALID":"Please Select Gender",
+    "MALE":"Male",
+    "FEMALE":"Female",
+    "ADD_NEW":"Add New Employee",
+    "FORM_VALID":"you can't add New Employee without completeing the mandatory Fields",
+    "":"",
+    "":""
+    
+    
   },
   "FOOTER": {
     "COPYRIGHTS": "All copyrights reserved For",

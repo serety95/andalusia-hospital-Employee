@@ -12,7 +12,7 @@
 
             <div class="col-md-6 col-12 py-3 ">
               <label for="name" class="form-label fw-bold">
-                Employee Name
+                {{"EMPLOYEE.NAME"|translate}}
               </label>
               <input [ngClass]="{'is-invalid': name.invalid && name.touched}" required minlength="6" maxlength="30"
                 [(ngModel)]="employee.name" #name="ngModel" type="text" class="form-control" id="name" name="name"
@@ -22,7 +22,7 @@
 
             <div class="col-md-6 col-12 py-3 ">
               <label for="department" class="form-label fw-bold">
-                Department
+                {{"EMPLOYEE.DEPARTMENT"|translate}}
               </label>
               <select class="form-select" [ngClass]="{'is-invalid':department.invalid && department.touched}"
                 [(ngModel)]="employee.department" id="department" name="department" required #department="ngModel">
@@ -36,7 +36,7 @@
 
             <div class="col-md-6 col-12 py-3">
               <label for="employeeCode" class="form-label fw-bold">
-                Employee Code
+                {{"EMPLOYEE.CODE"|translate}}
               </label>
               <input [ngClass]="{'is-invalid':employeeCode.invalid && employeeCode.touched}" required minlength="4"
                 maxlength="10" [(ngModel)]="employee.employeeCode" #employeeCode="ngModel" type="text"
@@ -47,40 +47,42 @@
 
             <div class="col-md-6 col-12 py-3">
               <label for="birthDay" class="form-label fw-bold">
-                Birthday
+                {{"EMPLOYEE.BIRTHDAY"|translate}}
               </label>
 
-              <input [ngClass]="{'is-invalid':birthDay.invalid && birthDay.touched}" [(ngModel)]="employee.birthDay"
-                #birthDay="ngModel" type="date" class="form-control" id="birthDay"  name="birthDay" required />
+              <input [ngClass]="{'is-invalid':birthDay.pristine}" [(ngModel)]="employee.birthDay"
+                #birthDay="ngModel" type="date" class="form-control" id="birthDay" name="birthDay" required />
                 <div class="invalid-feedback">Please select your BirthDay</div>
             </div>
 
             <div class="col-md-6 col-12 py-3 d-flex justify-content-start mt-2 align-items-center">
               <div class="form-check ">
                 <input [(ngModel)]="employee.gender" value="male" id="male" name="gender" class="form-check-input"
-                  type="radio">
+                required #gender="ngModel" type="radio">
                 <label class="form-check-label" for="male">
-                  Male
+                  {{"EMPLOYEE.MALE"|translate}}
                 </label>
               </div>
 
               <div class="form-check mx-1  mx-sm-4">
                 <input [(ngModel)]="employee.gender" value="female" id="female" name="gender" class="form-check-input"
-                  type="radio">
+                #gender="ngModel" type="radio">
                 <label class="form-check-label" for="female">
-                  Female
+                  {{"EMPLOYEE.FEMALE"|translate}}
                 </label>
               </div>
+              <div *ngIf="gender.pristine" class="my-1 py-1 alert alert-danger" role="alert">{{"EMPLOYEE.GENDER_VALID"|translate}}</div>
             </div>
-
+            
           </div>
 
           <div class="row my-3">
             <div class="col-6">
               <button type="submit" [disabled]="!addForm.valid" class="btn bg-danger text-white mt-3"
                 (click)="addEmployee()">
-                Add new Employee
+                {{"EMPLOYEE.ADD_NEW"|translate}}
               </button>
+              <div *ngIf="!addForm.valid" class="my-2 alert alert-danger" role="alert">{{"EMPLOYEE.FORM_VALID"|translate}}</div>
             </div>
           </div>
 

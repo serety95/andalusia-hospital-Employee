@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
     if (lang === 'en') {
       this.langFlag = '../../../assets/images/english.png';
       document.dir = this.direction[0];
-      console.log(document);
+     
     } else {
       this.langFlag = '../../../assets/images/arabic.png';
       document.dir = this.direction[1];
