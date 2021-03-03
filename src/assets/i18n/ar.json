@@ -7,10 +7,12 @@
    
   },
   "HOME": {
-    "GAMING_ACCESSORIES": "اكسسوارات الألعاب"
-    
+    "WELCOME": " اهلا بك في ابلكيشن الاندلسية للموظفين" 
   },
   "SEARCH-EMPLOYEE": {
     "DEPARTMENT": "القسم"
+  },
+  "FOOTER": {
+    "COPYRIGHTS": "جميع الحقوق محفوظة ©"
   }
 }
