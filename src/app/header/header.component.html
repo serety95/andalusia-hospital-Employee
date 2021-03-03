@@ -1,58 +1,64 @@
-<nav dir="auto" class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div dir="auto" class="container-fluid">
+<nav dir="auto" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  
+  <div dir="auto" class="container-fluid justify-content-start align-items-start align-items-lg-center">
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div dir="auto" class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav justify-content-start align-items-center mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="navbar-brand" href="#"><img src="../../assets/images/logo.png" height="60px" alt="" srcset=""></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" routerLink='/'>{{"HEADER.HOME"|translate}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" routerLink='/add'>{{"HEADER.ADD"|translate}}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" routerLink='/search'>{{"HEADER.SEARCH"|translate}}</a>
-        </li>
-        <li class="nav-item text-white d-flex justify-content-start align-items-center">
-          {{ time | date: 'hh:mm , dd MMMM yyyy'}}
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <img [src]="langFlag" alt="" srcset="" width="30px" />
-          </a>
+    <div dir="auto" class="collapse navbar-collapse justify-content-start align-items-start align-items-lg-center"
+      id="navbarSupportedContent">
+     <img class=" mx-lg-3" src="../../assets/images/logo.png" height="60px" alt="" srcset="" />
 
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <div class="mx-2 form-check">
-                <input #inputEnglish class="form-check-input" type="radio" (click)="changeCurrentLanguage('en')"
-                  name="lang" id="english-lang" [checked]="currentLang === 'en'" />
-                <label class="form-check-label" for="english-lang">
-                  English
-                </label>
-              </div>
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            <li>
-              <div class="mx-2 form-check">
-                <input #inputArabic class="form-check-input" type="radio" (click)="changeCurrentLanguage('ar')"
-                  name="lang" id="arabic-lang" [checked]="currentLang === 'ar'" />
-                <label class="form-check-label" for="arabic-lang"> عربي </label>
-              </div>
-            </li>
-          </ul>
+      <ul class="navbar-nav justify-content-start align-items-start align-items-lg-center mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link active" routerLink="/">{{
+            "HEADER.HOME" | translate
+            }}</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/add">{{
+            "HEADER.ADD" | translate
+            }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/search">{{
+            "HEADER.SEARCH" | translate
+            }}</a>
+        </li>
       </ul>
 
+      <div class="text-white mx-auto my-auto">
+        {{ time | date: "hh:mm , dd MMMM yyyy" }}
+      </div>
+      <div class="nav-item mx-auto my-auto dropdown text-white">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <img [src]="langFlag" alt="" srcset="" width="30px" />
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <div class="mx-2 form-check">
+              <input #inputEnglish class="form-check-input" type="radio" (click)="changeCurrentLanguage('en')"
+                name="lang" id="english-lang" [checked]="currentLang === 'en'" />
+              <label class="form-check-label" for="english-lang">
+                English
+              </label>
+            </div>
+          </li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <div class="mx-2 form-check">
+              <input #inputArabic class="form-check-input" type="radio" (click)="changeCurrentLanguage('ar')"
+                name="lang" id="arabic-lang" [checked]="currentLang === 'ar'" />
+              <label class="form-check-label" for="arabic-lang"> عربي </label>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

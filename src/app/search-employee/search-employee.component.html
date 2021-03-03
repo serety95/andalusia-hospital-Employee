@@ -3,11 +3,11 @@
         <form  class="bg-dark text-white shadow-lg p-2" action="">
 
             <fieldset dir="auto" class="p-4   ">
-                <legend  class="mb-2">{{title}}</legend>
+                <legend  class="mb-2">{{"EMPLOYEE.SEARCH"|translate}}</legend>
                 <div class="row d-flex justify-content-center align-items-center">
 
                     <div class="col-md-6 col-12  mb-3 search-hero px-3">
-                        <label for="search" class="form-label fw-bold">Search</label>
+                        <label for="search" class="form-label fw-bold">{{"EMPLOYEE.SEARCH_KEY"|translate}}</label>
                         <input class="form-control" 
                         type="text" 
                         [ngClass]="{'is-invalid':search.invalid && search.touched}" 
@@ -16,12 +16,12 @@
                         name="search" 
                         [(ngModel)]="searchText" 
                         required
-                        placeholder="Start searching for an employee by Code or name or department">
+                        placeholder='{{"EMPLOYEE.SEARCH_KEY_VAL"|translate}}'>
                         <div class="invalid-feedback">Please write down a Search keyword</div>
                       </div>
                       <div class="col-md-6 col-12  mb-3 px-3">
                         <label for="department" class="form-label fw-bold">
-                            {{"SEARCH-EMPLOYEE.DEPARTMENT"|translate}}
+                            {{"EMPLOYEE.DEPARTMENT"|translate}}
                            </label>
                            <select class="form-select custom-select" 
                            (change)="onChange($event)"
@@ -31,7 +31,7 @@
                            name="department"
                            required
                            #department="ngModel"
-                           ><option value="" disabled selected>select the department</option>
+                           ><option value="" disabled selected>{{"EMPLOYEE.DEPARTMENT_VALID"|translate}}</option>
                              <option value="web Development">web Development</option>
                              <option value="Mobile Development">Mobile Development</option>
                              <option value="Cloud Development">Cloud Development</option>
@@ -52,11 +52,11 @@
                 <thead>
                 <tr>
                   <th scope="col"><input type="checkbox" (click)="CheckAll()" ></th> 
-                  <th scope="col">Employee Name</th>
-                  <th scope="col">Department</th>
-                  <th scope="col">Employee Code</th>
-                  <th scope="col">Birthday</th>
-                  <th scope="col">Employee gender</th>
+                  <th scope="col">{{"EMPLOYEE.NAME"|translate}}</th>
+                  <th scope="col">{{"EMPLOYEE.DEPARTMENT"|translate}}</th>
+                  <th scope="col">{{"EMPLOYEE.CODE"|translate}}</th>
+                  <th scope="col">{{"EMPLOYEE.BIRTHDAY"|translate}}</th>
+                  <th scope="col">{{"EMPLOYEE.GENDER"|translate}}</th>
                 </tr>
                 </thead>
                 <tbody>

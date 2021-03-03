@@ -1,3 +1,17 @@
+
+$rtl-Direction:rtl;
+$rtl-start-Direction:right;
+
+
+
+*{ 
+    box-sizing: border-box;
+   
+}
+
+[dir='rtl'] html { color:red }
+
+
 .navbar-dark {
   &.bg-dark {
     background: url(../../assets/images/manu-pattern.jpg), #212529;
