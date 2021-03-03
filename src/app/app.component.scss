@@ -1,6 +1,32 @@
+// $layout-direction:ltr;
+
+// $rtl-Direction:rtl;
+// $ltr-Direction:ltr;
+// $rtl-start-Direction:right;
+// $ltr-start-Direction:left;
+
+
 *{ 
     box-sizing: border-box;
+   
 }
+
+// @mixin ltr {
+//     @if $layout-direction == ltr {
+//         *{ 
+//           direction: $ltr-Direction;
+//           text-align: $ltr-start-Direction;
+//         }
+//     }
+// }
+// @mixin rtl {
+//     @if $layout-direction == rtl {
+//         *{ 
+//           direction: $rtl-Direction;
+//           text-align: $rtl-start-Direction;
+//         }
+//     }
+// }
 menu{
     height: 100%;
 }

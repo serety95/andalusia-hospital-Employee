@@ -1,52 +1,9 @@
 {
   "HEADER": {
-    "HELLO": "Hello, ",
-    "SIGNIN": "Sign in",
-    "ACCOUNT_&_LISTS": "Account & Lists",
-    "RETURNS": "Returns",
-    "ORDERS": "& Orders",
-    "CART": "Cart",
-    "DELIVER_TO": "Deliver to",
-    "COUNTRY": "Egypt",
-    "NEW_CUSTOMER": "New customer?",
-    "START_HERE": "Start here.",
-    "SEARCH": "Search",
-    "ALL": "All",
-    "TODAYS_DEALS": "Today's Deals",
-    "CUSTOMER_SERVICE": "Customer Service",
-    "GITFT_CARDS": "Gift Cards",
-    "SELL": "Sell",
-    "REGISTRY": "Registry",
-    "LOGOUT": "Logout",
-    "ACCOUNT": "Account",
-    "ALL_DEPARTMENTS": "All Departments",
-    "ARTS_&_CRAFTS": "Arts & Crafts",
-    "AUTOMOTIVE": "Automotive",
-    "BABY": "Baby",
-    "BEAUTY_&_PERSONAL_CARE": "Beauty & Personal Care",
-    "BOOKS": "Books",
-    "COMPUTERS": "Computers",
-    "DIGITAL_MUSIC": "Digital Music",
-    "ELECTRONICS": "Electronics",
-    "KINDLE_STORE": "Kindle Store",
-    "PRIME_VIDEO": "Prime Video",
-    "WOMENS_FASHION": "Women's Fashion",
-    "MENS_FASHION": "Men's Fashion",
-    "GIRLS_FASHION": "Girls' Fashion",
-    "BOYS_FASHION": "Boys' Fashion",
-    "DEALS": "Deals",
-    "HEALTH_&_HOUSEHOLD": "Health & Household",
-    "HOME_&_KITCHEN": "Home & Kitchen",
-    "INDUSTRIAL_&_SCIENTIFIC": "Industrial & Scientific",
-    "LUGGAGE": "Luggage",
-    "MOVIES_&_TV": "Movies & TV",
-    "MUSIC_CDS_&_VINYL": "Music, CDs & Vinyl",
-    "PET_SUPPLIES": "Pet Supplies",
-    "SOFTWARE": "Software",
-    "SPORTS_&_OUTDOORS": "Sports & Outdoors",
-    "TOOLS_&_HOME_IMPROVEMENT": "Tools & Home Improvement",
-    "TOYS_&_GAMES": "Toys & Games",
-    "VIDEO_GAMES": "Video Games"
+    "HOME": "Home",
+    "ADD":"Add Employee",
+    "SEARCH":"Search for Employee"
+   
   },
   "HOME": {
     "WELCOME": "Welcome to Andalusia Employees App" 
@@ -55,6 +12,7 @@
     "DEPARTMENT": "Department"
   },
   "FOOTER": {
-    "COPYRIGHTS": "All copyrights reserved For"
+    "COPYRIGHTS": "All copyrights reserved For",
+    "NAME":"Mohamed Elserety"
   }
 }

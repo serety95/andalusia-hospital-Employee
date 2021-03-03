@@ -1,18 +1,19 @@
 {
   "HEADER": {
-    "HELLO": "مرحبا, ",
-    "SIGNIN": "تسجيل الدخول",
-    "ACCOUNT_&_LISTS": "الحساب والقوائم",
-    "RETURNS": "المرتجعات"
+    "HOME": "الصفحة الرئيسية",
+    "ADD":"اضف موظف",
+    "SEARCH":"ابحث عن موظف"
    
   },
   "HOME": {
     "WELCOME": " اهلا بك في ابلكيشن الاندلسية للموظفين" 
   },
-  "SEARCH-EMPLOYEE": {
+  "EMPLOYEE": {
     "DEPARTMENT": "القسم"
+
   },
   "FOOTER": {
-    "COPYRIGHTS": "جميع الحقوق محفوظة ©"
+    "COPYRIGHTS": " جميع الحقوق محفوظة ل ©",
+    "NAME":"محمد السريتي"
   }
 }
